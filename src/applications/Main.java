@@ -1,3 +1,5 @@
+package applications;
+
 import entities.Client;
 import entities.Order;
 import entities.OrderItem;
@@ -6,9 +8,7 @@ import entities_enum.OrderStatus;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -29,7 +29,6 @@ public class Main {
         Order order = new Order(new Date(), status, client);
         System.out.print("How many items to this order? ");
         int quantity = scanner.nextInt();
-        List<OrderItem> orders = new ArrayList<>();
         for (int i = 1; i <= quantity; i++){
             System.out.println("Enter #" + i + " item data: ");
             System.out.print("Product name: ");
